@@ -5,6 +5,7 @@ __version__ = "0.1.0"
 
 cwd = os.getcwd()
 
+
 class SmartFormatter(argparse.HelpFormatter):
 
     def _split_lines(self, text, width):
@@ -12,6 +13,7 @@ class SmartFormatter(argparse.HelpFormatter):
             return text[2:].splitlines()
         # this is the RawTextHelpFormatter._split_lines
         return argparse.HelpFormatter._split_lines(self, text, width)
+
 
 def creat_datapack(args: argparse.Namespace):
     # create datapack folder
@@ -73,12 +75,13 @@ def creat_datapack(args: argparse.Namespace):
 def create_resourcepack(args: argparse.Namespace):
     print("resourcepack")
 
-if __name__ =="__main__":
+
+if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         prog="mc-pack-template",
         description="mc-pack-template creates a basic directory structure for a new mc-datapack "
-             "or mc-resourcepack project",
-     formatter_class=SmartFormatter
+                    "or mc-resourcepack project",
+        formatter_class=SmartFormatter
     )
 
     parser.add_argument(
@@ -95,7 +98,7 @@ if __name__ =="__main__":
         metavar="TYPE",
         help="R|Specify the type of the project to create\n"
              "datapack|dp for a datapack\n"
-            "resourcepack|rp for a resourcepack"
+             "resourcepack|rp for a resourcepack"
     )
 
     parser.add_argument(
@@ -117,7 +120,7 @@ if __name__ =="__main__":
     )
 
     parser.add_argument(
-       "-v", "--pack-version",
+        "-v", "--pack-version",
         action="store",
         dest="version",
         nargs=1,
