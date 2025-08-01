@@ -31,14 +31,16 @@ options:
 ```
 
 ## Installation
+
 ## Uninstallation
+
 ## Data pack Structure
 The data pack files are store in the `datapacks` folder of the corresponding Minecraft world. To find your world folder, 
-you can either locate it via your game directory `.mincraft/saves/(World Name)/datapacks` accessible through the 
-`%APPDATA%` folder or open your world directory via the game by selecting your world and clicking "Edit" -> 
+you can either locate it via your game directory `.mincraft/saves/(World Name)/datapacks` (on Windows accessible through 
+the `%APPDATA%` folder) or open your world directory via the game by selecting your world and clicking "Edit" -> 
 "Open world folder". <br>
-The basic data pack structure is like the following:
-```bash
+The basic data pack structure looks like the following:
+```
 .mincraft
 └── saves
     └── (World Name)
@@ -49,12 +51,17 @@ The basic data pack structure is like the following:
                 │   └── minecraft
                 │       └── tags
                 │           └── functions
-                │               ├── load.json (contains referenz to function called when data pack us loaded)
-                │               └── tick.json (contains referenc to function called every tick)
-                └── NAMESPACE                 (namespace of the data pack, used to refer to the data pack functions)
+                │               ├── load.json (contains referenc to function called 
+                │               │               when data pack us loaded)
+                │               └── tick.json (contains referenc to function called 
+                │                               every tick)
+                └── NAMESPACE                 (namespace of the data pack, used to 
+                    │                           refer to the data pack functions)
                     └── funcions
-                        └── *.mcfunction      (each file is a function, accessed via "namespace:file_name")
+                        └── *.mcfunction      (each file is a function, accessed 
+                                                via "namespace:file_name")
 ```
+
 ## Further Information
 For more indepth information, please refer to the minecraft wiki on 
 [data packs](https://minecraft.fandom.com/wiki/Tutorials/Creating_a_data_pack) and 
