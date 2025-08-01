@@ -1,14 +1,15 @@
 <h1 align="center">MC-Pack Templates Generator</h1>
 
-The mc-pack templates generator, as the name suggests, takes on the tedious task of creating a basic file structure 
+The mc-pack templates generator, as the name suggests, takes on the tedious task of creating a basic file structure
 for minecraft data packs and resource pack.
 
 ## Usage
-```
-usage: mc-pack-template [-h] [-V] [-n NAMESPACE] [-v VERSION] [-t] [-d] TYPE NAME
 
-mc-pack-template creates a basic directory structure for a new mc-datapack or
-mc-resourcepack project
+```
+usage: mc_pack_template [-h] [-V] [-n NAMESPACE] [-v VERSION] [-t] [-d] TYPE NAME
+
+mc_pack_template creates a basic directory structure for a new minecraft data pack or
+minecraft resource pack project
 
 positional arguments:
   TYPE                  Specify the type of the project to create
@@ -31,15 +32,40 @@ options:
 ```
 
 ## Installation
+To install mc_pack_template, follow these steps:
+1. Clone repository from GithHub:
+```bash
+git clone 
+```
+2. Navigate to the cloned repository:
+```bash
+cd mc-pack-tempaltes-generator
+```
+3. Install the program using pip:
+```bash
+pip install .
+```
+4. Run the script to create a template for a data pack named test, for example:
+```
+mc_pack_template dp test
+```
 
 ## Uninstallation
+To install mc_pack_template, follow these steps:
+1. uninstall the script:
+```bash
+pip uinstall mc_pack_template
+```
+2. Further, the cloned repository can be deleted
 
 ## Data pack Structure
-The data pack files are store in the `datapacks` folder of the corresponding Minecraft world. To find your world folder, 
-you can either locate it via your game directory `.mincraft/saves/(World Name)/datapacks` (on Windows accessible through 
-the `%APPDATA%` folder) or open your world directory via the game by selecting your world and clicking "Edit" -> 
+
+The data pack files are store in the `datapacks` folder of the corresponding Minecraft world. To find your world folder,
+you can either locate it via your game directory `.mincraft/saves/(World Name)/datapacks` (on Windows accessible through
+the `%APPDATA%` folder) or open your world directory via the game by selecting your world and clicking "Edit" ->
 "Open world folder". <br>
 The basic data pack structure looks like the following:
+
 ```
 .mincraft
 └── saves
@@ -63,6 +89,7 @@ The basic data pack structure looks like the following:
 ```
 
 ## Further Information
-For more indepth information, please refer to the minecraft wiki on 
-[data packs](https://minecraft.fandom.com/wiki/Tutorials/Creating_a_data_pack) and 
+
+For more indepth information, please refer to the minecraft wiki on
+[data packs](https://minecraft.fandom.com/wiki/Tutorials/Creating_a_data_pack) and
 [resource packs](https://minecraft.fandom.com/wiki/Resource_pack)
