@@ -1,0 +1,1 @@
+# mc-pack tamplates generator
