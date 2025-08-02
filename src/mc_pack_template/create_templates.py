@@ -75,4 +75,36 @@ def creat_datapack(args: argparse.Namespace):
 
 
 def create_resourcepack(args: argparse.Namespace):
-    print("resourcepack")
+    # create the resource pack folder
+    resourcepack_folder = os.path.join(cwd, args.name[0])
+
+    # create /data/minecraft/tags/functions folder
+    entry_points_folder = os.path.join(resourcepack_folder, "assets", "minecraft")
+
+    # create /namespace/functions folder
+    namespace = args.namespace[0] if args.namespace else args.name[0].lower()
+    namespace_folder = os.path.join(resourcepack_folder, "assets", namespace)
+
+    if args.dry_run:
+        print(resourcepack_folder)
+
+        # create meta-data file
+        print(os.path.join(resourcepack_folder, "pack.mcmeta"))
+        print(
+            f'pack.mcmeta: {{"pack":{{"pack_format":{args.version[0]},"description":"{args.name[0]} resourcepack"}}}}'
+        )
+
+        print(entry_points_folder)
+        print(namespace_folder)
+
+    else:
+        os.mkdir(resourcepack_folder)
+
+        # create meta-data file
+        with open(os.path.join(resourcepack_folder, "pack.mcmeta"), "a") as file:
+            file.write(
+                f'{{"pack":{{"pack_format":{args.version[0]},"description":"{args.name[0]} datapack"}}}}'
+            )
+
+        os.makedirs(entry_points_folder)
+        os.makedirs(namespace_folder)

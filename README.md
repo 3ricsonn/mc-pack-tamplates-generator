@@ -88,6 +88,24 @@ The basic data pack structure looks like the following:
                                                 via "namespace:file_name")
 ```
 
+## Resource pack Structure
+
+The resource pack files are, different from data pack files, stored in `.minecraft/resourcepacks`. In there the basic 
+structure looks like the following:
+```
+.mincraft
+└── resourcepacks
+    └── NAME                                  (Name of the resource pack)
+        ├── pack.mcmeta                       (contains name and version)
+        └── assets
+            ├── NAMESPACE                     (namespace of the resource pack, used to 
+            │   │                               refer to new textures for new items/models/etc.)
+            │   └── [items,models, etc.]
+            └── minecraft                     (namespace for minecraft, used to override 
+                │                               textures for exisiting items/models/etc. in minecraft)
+                └── [modles,sound, etc.]
+```
+
 ## Further Information
 
 For more indepth information, please refer to the minecraft wiki on
