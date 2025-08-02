@@ -1,6 +1,6 @@
 [project]
 name="mc_pack_template"
-version="0.2.1"
+version="0.3.0"
 
 [build-system]
 requires = ["setuptools >= 77.0.3"]
