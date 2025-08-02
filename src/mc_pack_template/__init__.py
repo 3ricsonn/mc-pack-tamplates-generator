@@ -2,7 +2,7 @@ import argparse
 
 from .create_templates import SmartFormatter, create_resourcepack, creat_datapack
 
-__version__ = "0.2.1"
+__version__ = "0.3.0"
 
 
 def start():
