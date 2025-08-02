@@ -19,12 +19,12 @@ def creat_datapack(args: argparse.Namespace):
 
     # create /data/minecraft/tags/functions folder
     entry_points_folder = os.path.join(
-        datapack_folder, "data", "minecraft", "tags", "functions"
+        datapack_folder, "data", "minecraft", "tags", "function"
     )
 
     # create /namespace/functions folder
     namespace = args.namespace[0] if args.namespace else args.name[0].lower()
-    namespace_folder = os.path.join(datapack_folder, "data", namespace, "functions")
+    namespace_folder = os.path.join(datapack_folder, "data", namespace, "function")
 
     if args.dry_run:
         print(datapack_folder)
