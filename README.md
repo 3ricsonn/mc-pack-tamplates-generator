@@ -6,9 +6,9 @@ for minecraft data packs and resource pack.
 ## Usage
 
 ```
-usage: mc_pack_template [-h] [-V] [-n NAMESPACE] [-v VERSION] [-t] [-d] TYPE NAME
+usage: mc-pack-template [-h] [-V] [-n NAMESPACE] [-v VERSION] [-t] [-d] TYPE NAME
 
-mc_pack_template creates a basic directory structure for a new minecraft data pack or
+mc-pack-template creates a basic directory structure for a new minecraft data pack or
 minecraft resource pack project
 
 positional arguments:

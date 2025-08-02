@@ -2,14 +2,14 @@ import argparse
 
 from .create_templates import SmartFormatter, create_resourcepack, creat_datapack
 
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 
 
 def start():
     """Starts skript and process command line arguments"""
     parser = argparse.ArgumentParser(
-        prog="mc_pack_template",
-        description="mc_pack_template creates a basic directory structure for a new mc-datapack "
+        prog="mc-pack-template",
+        description="mc-pack-template creates a basic directory structure for a new mc-datapack "
         "or mc-resourcepack project",
         formatter_class=SmartFormatter,
     )
